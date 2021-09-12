@@ -1,0 +1,4 @@
+<div class="search-input-container" [ngClass]="{ 'focus': focus }">
+  <mat-icon>search</mat-icon>
+  <input type="text" placeholder="Search" class="search-input" (focus)="focus = true;" (blur)="focus = false" #inputField />
+</div>

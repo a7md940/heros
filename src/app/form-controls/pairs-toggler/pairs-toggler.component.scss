@@ -1,0 +1,31 @@
+.pairs-toggler-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.toggler-container {
+  margin: 0rem 1rem;
+  cursor: pointer;
+  background-color: #16af9c;
+  padding: 3px;
+  width: 50px;
+  height: 30px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  
+  &.disabled {
+    justify-content: center;
+    background-color: #ddd;
+  }
+  
+  &__button {
+    cursor: pointer;
+    display: block;
+    border-radius: 50%;
+    background-color: white;
+    width: 50%;
+    height: 100%;
+  }
+}

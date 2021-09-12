@@ -1,0 +1,10 @@
+<div class="pairs-toggler-container">
+  <input [id]="'pairs-toggler-id-' + id" type="checkbox" hidden (change)="onChange()" />
+  <span *ngIf="pairs[0] as firstTogglerItem">{{ firstTogglerItem.label }}</span>
+  <label [for]="'pairs-toggler-id-' + id" class="toggler-container"
+    [ngClass]="{ 'justify-content-end': value == pairs[1].value, 'justify-content-start': value == pairs[0].value, 'justify-content-center bg-dark': value == null }">
+    <div class="toggler-container__button">
+    </div>
+  </label>
+  <span *ngIf="pairs[1] as secondTogglerItem">{{ secondTogglerItem.label }}</span>
+</div>

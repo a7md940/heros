@@ -1,0 +1,36 @@
+<div class="d-flex align-items-center justify-content-center">
+  <div class="search-field mx-4">
+    <app-search-input [formControl]="searchFormControl"></app-search-input>
+  </div>
+
+  <div class="sort-field mx-2">
+    <app-pairs-toggler [pairs]="[{label: 'Sort By Power', value: 'power'}, {value: 'name', label: 'Sort By Name'}]"
+      [formControl]="sortFieldFormControl">
+    </app-pairs-toggler>
+  </div>
+</div>
+<div class="my-4"></div>
+<div class="list-container">
+  <table>
+    <thead>
+      <tr>
+        <th *ngFor="let head of headers">
+          {{ head }}
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let hero of heros">
+        <td>
+          {{ hero.name }}
+        </td>
+        <td>
+          {{ hero.powers }}
+        </td>
+        <td>
+          {{ hero.rate }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

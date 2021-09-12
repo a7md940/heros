@@ -1,0 +1,27 @@
+.search-input-container {
+  --color: #bbb;
+  --border-color: rgba(125, 116, 187, 1);
+
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--color);
+  padding: 1px 3px;
+  mat-icon {
+    color: var(--color);
+  }
+  &.focus {
+    box-shadow: 0px 0px 0px 1px var(--border-color);
+    border: 1px solid var(--border-color);
+  }
+
+  .search-input {
+    border: none;
+    outline: none;
+    appearance: textfield;
+
+    &::placeholder {
+      color: var(--color);
+    }
+  }
+}
